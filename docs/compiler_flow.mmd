@@ -1,0 +1,10 @@
+flowchart LR
+  A["MiniQuery Source (.mq)"] --> B["Lexer (lexer.py)"]
+  B --> C["Tokens"]
+  C --> D["Parser (parser.py)"]
+  D --> E["AST / Parse Tree"]
+  E --> F["Semantic Analyzer (semantic.py)"]
+  F --> G["IR Generator (ir_generator.py)"]
+  G --> H["Optimizer (optimizer.py)"]
+  H --> I["Code Generator (codegen.py)"]
+  I --> J["Program Output"]

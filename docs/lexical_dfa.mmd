@@ -1,0 +1,15 @@
+
+stateDiagram-v2
+    [*] --> S
+    S --> ID : letter/_
+    S --> NUM : digit
+    ID --> ID : letter/digit/_
+    NUM --> NUM : digit
+
+
+stateDiagram-v2
+    [*] --> GT : >
+    [*] --> LT : <
+    [*] --> LBRACKET : [
+    [*] --> RBRACKET : ]
+    [*] --> COMMA : ,

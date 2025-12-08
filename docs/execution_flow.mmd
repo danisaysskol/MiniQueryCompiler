@@ -1,0 +1,15 @@
+flowchart TD
+    A["IRInstruction[0]"] --> B["IRInstruction[1]"]
+    B --> C["..."]
+    C --> D["IRInstruction[n]"]
+
+    subgraph Env["Runtime Environment (env dict)"]
+        E["nums"]
+        F["big"]
+        G["evens"]
+        H["total"]
+    end
+
+    A -->|updates| Env
+    B -->|updates| Env
+    D -->|updates/reads| Env
