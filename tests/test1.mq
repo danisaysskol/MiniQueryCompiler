@@ -1,0 +1,9 @@
+data nums = [1,2,3,4,10,15]
+
+big = select >5 from nums
+evens = filter even from nums
+total = sum from nums
+
+print big
+print evens
+print total

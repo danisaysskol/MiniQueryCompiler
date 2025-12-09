@@ -1,0 +1,9 @@
+data values = [5,7,2,9,1,4]
+
+small = select <5 from values
+odds = filter odd from values
+mx = max from values
+
+print small
+print odds
+print mx

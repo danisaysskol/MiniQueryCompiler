@@ -1,0 +1,12 @@
+data nums = [2,3,4,5,6,7,8,9]
+
+evens = filter even from nums
+big_evens = select >5 from evens
+total_big_evens = sum from big_evens
+count_big_evens = count from big_evens
+
+print nums
+print evens
+print big_evens
+print total_big_evens
+print count_big_evens

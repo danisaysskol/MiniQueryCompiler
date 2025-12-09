@@ -1,0 +1,9 @@
+data marks = [50,60,75,60,90]
+
+sixty = select =60 from marks
+count_all = count from marks
+count_sixty = count from sixty
+
+print sixty
+print count_all
+print count_sixty

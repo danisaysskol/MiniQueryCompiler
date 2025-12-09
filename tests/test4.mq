@@ -1,0 +1,9 @@
+data temps = [10,15,20,25,30,35]
+
+midrange = select between 15 and 30 from temps
+min_all = min from temps
+min_mid = min from midrange
+
+print midrange
+print min_all
+print min_mid

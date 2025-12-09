@@ -1,0 +1,12 @@
+data a = [1,2,3,4,5]
+data b = [10,20,30,40,50]
+
+high_a = select >3 from a
+low_b = select <40 from b
+even_a = filter even from a
+sum_b = sum from b
+
+print high_a
+print low_b
+print even_a
+print sum_b

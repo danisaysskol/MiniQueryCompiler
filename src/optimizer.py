@@ -99,22 +99,19 @@ class Optimizer:
     def copy_propagation(self, ir: List[IRInstruction]) -> List[IRInstruction]:
         propagation_map = {}
 
-        # Build propagation map ONLY for ASSIGN instructions where arg1 is a temp
+        # Build simple map x -> _tK for ASSIGN _tK -> x
         for instr in ir:
             if instr.op == "ASSIGN" and isinstance(instr.arg1, str) and instr.arg1.startswith("_t"):
                 propagation_map[instr.result] = instr.arg1
 
-        # Apply propagation SAFELY (only on string operands)
+        # Apply propagation
         new_ir = []
         for instr in ir:
             arg1 = instr.arg1
             arg2 = instr.arg2
 
-            # Only propagate if arg1 is a string variable
             if isinstance(arg1, str):
                 arg1 = propagation_map.get(arg1, arg1)
-
-            # Only propagate if arg2 is a string variable
             if isinstance(arg2, str):
                 arg2 = propagation_map.get(arg2, arg2)
 
